@@ -5,7 +5,7 @@
 		{
 		  "title"    : "{{ post.title | escape }}",
 		  "category" : "{{ post.category }}",
-		  "url"      : "{{ post.url }}",
+		  "url"      : "{{ site.baseurl }}{{ post.url }}",
 		  "date"     : "{{ post.date | date: "%B %d, %Y" }}",
 		  "tags"		 : "{{ post.tags | join(' ') }}"
 		} {% if forloop.last %}{% else %},{% endif %}
